@@ -2,6 +2,7 @@ const express = require("express");
 const app = express();
 
 const indexRouter = require("./routes/indexRouter");
+const newRouter = require("./routes/newRouter");
 
 const path = require("node:path");
 app.set("views", path.join(__dirname, "views"));
@@ -11,6 +12,7 @@ const assetsPath = path.join(__dirname, "public");
 app.use(express.static(assetsPath));
 
 app.use("/", indexRouter);
+app.use("/new", newRouter);
 app.use((err, req, res, next) => {
   console.error(err);
   res.status(err.statusCode || 500).send(err.message);
