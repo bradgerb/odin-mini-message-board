@@ -4,6 +4,12 @@
     <link rel="stylesheet" href="../styles.css">
   </head>
   <body>
-        <div>Test New</div>
+        <form method="POST" action="/new">
+          <label for="author">Author name:</label><br>
+          <input type="text" id="author" name="author"><br>
+          <label for="message">Message text:</label><br>
+          <input type="text" id="message" name="message"><br>
+          <button type="submit" class="postButton">Submit</button>
+        </form>
   </body>
 </html>

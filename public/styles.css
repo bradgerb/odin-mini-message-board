@@ -2,6 +2,10 @@ ul {
     list-style: none;
 }
 
-button {
+.newMessage {
     margin-left: 40px;
+}
+
+.postButton {
+    margin-top: 10px;
 }
