@@ -3,6 +3,6 @@ const { getDetails } = require('../controllers/detailsController');
 
 const detailsRouter = Router();
 
-detailsRouter.get('/', getDetails);
+detailsRouter.get('/:detailID', getDetails);
 
 module.exports = detailsRouter;
