@@ -3,6 +3,7 @@ const app = express();
 
 const indexRouter = require("./routes/indexRouter");
 const newRouter = require("./routes/newRouter");
+const detailsRouter = require("./routes/detailsRouter");
 
 const path = require("node:path");
 app.set("views", path.join(__dirname, "views"));
@@ -15,6 +16,7 @@ app.use(express.urlencoded({ extended: true }));
 
 app.use("/", indexRouter);
 app.use("/new", newRouter);
+app.use("/details", detailsRouter);
 app.use((err, req, res, next) => {
   console.error(err);
   res.status(err.statusCode || 500).send(err.message);

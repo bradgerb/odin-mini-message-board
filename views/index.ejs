@@ -5,11 +5,16 @@
   </head>
   <body>
     <ul>
+      <% let count = 0 %>
       <% messages.forEach((message) => { %>
         <li>Message: <%= message.text %></li>
         <li>User: <%= message.user %></li>
         <li>Added at: <%= message.added %></li>
+        <form method="GET" action="/details">
+          <button type="submit" class="openDetails" id=<%= count %>>Open details</button>
+        </form>
         <hr>
+        <% count++ %>
       <% }); %>
     </ul>
     <form method="GET" action="/new">
