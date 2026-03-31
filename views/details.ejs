@@ -4,7 +4,11 @@
     <link rel="stylesheet" href="../styles.css">
   </head>
   <body>
-    <div>detailID <%= detailID %></div>
+    <ul>
+        <li>Message: <%= messages[detailID].text %></li>
+        <li>User: <%= messages[detailID].user %></li>
+        <li>Added at: <%= messages[detailID].added %></li>
+    </ul>
     <form method="GET" action="/">
         <button type="submit" class="backButton">Back</button>
     </form>
