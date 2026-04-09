@@ -1,10 +1,11 @@
-const db = require("../db");
+// const db = require("../db");
+const db = require ('../db/queries');
 const CustomNotFoundError = require("../errors/CustomNotFoundError");
 
 const getDetails = async (req, res) => {
 
     const { detailID } = req.params;
-    const messages = await db.getMessages();
+    const messages = await db.getAllMessages();
 
     if (!detailID) {
         throw new CustomNotFoundError("Message details not found");
